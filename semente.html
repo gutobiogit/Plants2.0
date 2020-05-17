@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<head>
+<title>Entrada Semente</title>
+</head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container">
+<style>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: left;
+}
+
+p {
+    font-family: verdana;
+    font-size: 30px;
+    
+ }
+</style>
+<br><br>
+<form class="form-horizontal">
+  <div class="form-group form-group-sm">
+
+  <label class="col-sm-2 control-label" for="nome">Nome:</label> 
+    <div class="col-sm-10">
+    <input type="text" name="nome" class="form-control" id= "nome">
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="nome_cientifico">Nome Cientifico:</label> 
+    <div class="col-sm-10">
+    <input type="text" name="nome_cien" class="form-control" id="nome_cien">
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="tempo_colheita_verao">Colheita verao:</label>
+    <div class="col-sm-10"> 
+    <select id="tempo_colheita_verao" class="form-control"> 
+      <option>0</option>  
+      <option>10</option>  
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+      <option>90</option> 
+      <option>100</option>
+      <option>110</option> 
+      <option>120</option> 
+      <option">130</option>  
+      <option>140</option> 
+      <option>150</option> 
+      <option">160</option>  
+      <option>170</option> 
+      <option>180</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+   
+  <label class="col-sm-2 control-label" for="tempo_colheita_inv">Colheita inverno:</label>
+    <div class="col-sm-10"> 
+    <select id="tempo_colheita_inv" class="form-control"> 
+      <option>0</option>  
+      <option>10</option>  
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+      <option>90</option> 
+      <option>100</option>
+      <option>110</option> 
+      <option>120</option> 
+      <option">130</option>  
+      <option>140</option> 
+      <option>150</option> 
+      <option">160</option>  
+      <option>170</option> 
+      <option>180</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="tipo">Tipo planta:</label>
+    <div class="col-sm-10"> 
+    <select id="tipo" class="form-control"> 
+      <option>Folha</option>  
+      <option>Flor</option>  
+      <option>Fruto</option> 
+      <option>Raiz</option> 
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_linha">Distancia linha:</label>
+    <div class="col-sm-10"> 
+    <select id="dist_linha" class="form-control"> 
+      <option>5</option>
+      <option>10</option>  
+      <option>15</option>  
+      <option>20</option>   
+      <option>10</option>  
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_planta">Distancia planta:</label>
+    <div class="col-sm-10"> 
+    <select id="dist_planta" class="form-control"> 
+      <option>5</option>
+      <option>10</option>  
+      <option>15</option> 
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+      <option>90</option> 
+      <option>100</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_planta">Consumo agua:</label>
+    <div class="col-sm-10"> 
+    <select id="consumo_agua" class="form-control"> 
+      <option>1</option>
+      <option>2</option>  
+      <option>3</option> 
+      <option>4</option> 
+      <option>5</option> 
+      <option>6</option> 
+      <option>7</option>  
+      <option>8</option> 
+      <option>9</option> 
+      <option>10</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_planta">Unidade:</label>
+    <div class="col-sm-10"> 
+    <select id="unidade" class="form-control"> 
+      <option>Unidade</option>
+      <option>Maco</option>  
+      <option>Kg</option> 
+    </select>
+    </div>
+
+<br><br>
+
+  <label class="col-sm-2 control-label" for="mes_prod">Mes producao:</label>
+    <div class="checkbox">
+      <label><input type="checkbox" value ="1">Janeiro </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="2">Fevereiro </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="3">Marco </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="4">Abril </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="5">Maio </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="6">Junho </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="7">Julho </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="8">Agosto </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="9">Setembro </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="10">Outubro </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="11">Novembro </label>&nbsp&nbsp
+      <label><input type="checkbox" value ="12">Dezembro </label>&nbsp&nbsp
+    </div>
+
+  <label class="col-sm-2 control-label" for="ativo">Ativo:</label>
+    <input type="radio" name ="ativo" checked ="true">Sim &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="radio" name ="ativo">Nao
+
+<br><br>
+
+    <div class="pager" style="line-height: 70px;">
+
+      <button type="button" class="btn btn-success" value="Submit Button" Disabled="true">OK</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <button type="button" class="btn btn-danger">CANCELA</button>
+   </div>
+
+  </div>
+</form>
+
+
+
+</body>
+</html>

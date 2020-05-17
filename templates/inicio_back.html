@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+ <script type="text/javascript">
+function altera(numero)
+{
+if (document.getElementById(numero).checked=true) {
+          window.location.assign("www.g1.com.br"+numero);}
+
+
+
+}
+</script> 
+
+
+
+  <link rel="stylesheet" href="interruptor.css">
+<style>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 30px;
+    
+ }
+</style>
+</head>
+
+
+
+
+
+<body>
+
+
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi1"  onclick="altera('interrupi1')">
+  <div class="slider round"></div>
+</label>
+  <font color = "blue" size=5>Area 1 (canteiros 1,2,3,4)</font>
+</br>
+</br>
+
+
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" checked=1 onclick= 'window.location.assign("")'>
+  <div class="slider round"></div>
+</label>
+  <font color = "yellow" size=5>Area 2 (canteiros 5,6)</font>
+  </br>
+  </br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi3" onclick="altera('interrupi3')">
+  <div class="slider round"></div>
+</label>
+  <font color = "red" size=5>Area 3 (canteiros 7,8)</font>
+  </br>
+  </br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" onclick='window.location.assign("www.g1.com.br")';>
+  <div class="slider round"></div>
+</label>
+  <font color = "green" size=5>Area 4 (canteiros 9,10)</font>
+  </br>
+  </br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" onclick='window.location.assign("www.g1.com.br")';>
+  <div class="slider round"></div>
+</label>
+  <font color = "purple" size=5>Area 5 (canteiros tomate, casa, pimentas)</font>
+</br>
+</br>
+</br>
+</br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" onclick='window.location.assign("www.g1.com.br")';>
+  <div class="slider round"></div>
+</label>
+  <font color = "white" size=5>Flush do sistema</font>
+</br>
+</body>
+</html>
+

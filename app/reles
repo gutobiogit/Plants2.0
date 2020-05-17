@@ -1,0 +1,7 @@
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM)
+lista=(18,23,24,25,12,16,20,21)
+GPIO.setup(lista,GPIO.OUT,initial=GPIO.HIGH)
+print GPIO.input(18)
+" GPIO.output(lista,GPIO.LOW)"

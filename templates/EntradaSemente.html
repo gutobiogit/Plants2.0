@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+
+<head>
+
+<script type="text/javascript">
+  function validaFormulario()
+    {campo_nome = $("#nome").val();
+     campo_nome_cien = $("#nome_cien").val();
+     campo_colheita_verao = $("#tempo_colheita_verao").val();
+     campo_colheita_inverno = $("#tempo_colheita_inv").val();
+     mes_producao1 = $("#janeiro").is(":checked");
+     mes_producao2 = $("#fevereiro").is(":checked");
+     mes_producao3 = $("#marco").is(":checked");
+     mes_producao4 = $("#abril").is(":checked");
+     mes_producao5 = $("#maio").is(":checked");
+     mes_producao6 = $("#junho").is(":checked");
+     mes_producao7 = $("#julho").is(":checked");;
+     mes_producao8 = $("#agosto").is(":checked");
+     mes_producao9 = $("#setembro").is(":checked");
+     mes_producao10 = $("#outubro").is(":checked");
+     mes_producao11 = $("#novembro").is(":checked");
+     mes_producao12 = $("#dezembro").is(":checked");
+
+     
+     if ((mes_producao1==true || mes_producao2==true || mes_producao3==true || mes_producao4==true || mes_producao5==true || mes_producao6==true
+          || mes_producao7==true || mes_producao8==true || mes_producao9==true || mes_producao10==true || mes_producao11==true || mes_producao12==true) 
+          && (campo_nome!="" && campo_nome_cien!="" && campo_colheita_verao>0 && campo_colheita_inverno>0))
+            {
+              $("#BotaoOK").prop("disabled",false);
+             }
+     else
+       { 
+        $("#BotaoOK").prop("disabled",true);
+       }
+
+
+    } 
+
+</script>
+
+<title>Entrada Semente</title>
+</head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container">
+<style>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: left;
+}
+
+p {
+    font-family: verdana;
+    font-size: 30px;
+    
+ }
+</style>
+<br><br>
+<form class="form-horizontal">
+  <div class="form-group form-group-sm">
+
+  <label class="col-sm-2 control-label" for="nomes">Nome:</label> 
+    <div class="col-sm-10">
+    <input type="text" name="nome" class="form-control" id= "nome" onkeyup="validaFormulario()">
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="nome_cientifico">Nome Cientifico:</label> 
+    <div class="col-sm-10">
+    <input type="text" name="nome_cien" class="form-control" id="nome_cien" onkeyup="validaFormulario()">
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="tempo_colheita_verao">Colheita verao:</label>
+    <div class="col-sm-10"> 
+    <select id="tempo_colheita_verao" name="tempo_colheita_verao" class="form-control" onchange="validaFormulario()"> 
+      <option>0</option>  
+      <option>10</option>  
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+      <option>90</option> 
+      <option>100</option>
+      <option>110</option> 
+      <option>120</option> 
+      <option">130</option>  
+      <option>140</option> 
+      <option>150</option> 
+      <option">160</option>  
+      <option>170</option> 
+      <option>180</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+   
+  <label class="col-sm-2 control-label" for="tempo_colheita_inv" name="tempo_colheita_inv">Colheita inverno:</label>
+    <div class="col-sm-10"> 
+    <select id="tempo_colheita_inv" name="tempo_colheita_inv" class="form-control" onchange="validaFormulario()"> 
+      <option>0</option>  
+      <option>10</option>  
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+      <option>90</option> 
+      <option>100</option>
+      <option>110</option> 
+      <option>120</option> 
+      <option">130</option>  
+      <option>140</option> 
+      <option>150</option> 
+      <option">160</option>  
+      <option>170</option> 
+      <option>180</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="tipo">Tipo planta:</label>
+    <div class="col-sm-10"> 
+    <select id="tipo" name="tipo" class="form-control"> 
+      <option>Folha</option>  
+      <option>Flor</option>  
+      <option>Fruto</option> 
+      <option>Raiz</option> 
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_linha">Distancia linha:</label>
+    <div class="col-sm-10"> 
+    <select id="dist_linha" name "dist_linha" class="form-control"> 
+      <option>5</option>
+      <option>10</option>  
+      <option>15</option>  
+      <option>20</option>   
+      <option>10</option>  
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_planta">Distancia planta:</label>
+    <div class="col-sm-10"> 
+    <select id="dist_planta" name= "dist_planta" class="form-control"> 
+      <option>5</option>
+      <option>10</option>  
+      <option>15</option> 
+      <option>20</option> 
+      <option>30</option> 
+      <option>40</option> 
+      <option>50</option>  
+      <option>60</option> 
+      <option>70</option> 
+      <option>80</option>  
+      <option>90</option> 
+      <option>100</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_planta">Consumo agua:</label>
+    <div class="col-sm-10"> 
+    <select id="consumo_agua" name="consumo_agua" class="form-control"> 
+      <option>1</option>
+      <option>2</option>  
+      <option>3</option> 
+      <option>4</option> 
+      <option>5</option> 
+      <option>6</option> 
+      <option>7</option>  
+      <option>8</option> 
+      <option>9</option> 
+      <option>10</option>
+    </select>
+    </div>
+
+<br><br><br><br>
+
+  <label class="col-sm-2 control-label" for="dist_planta">Unidade:</label>
+    <div class="col-sm-10"> 
+    <select id="unidade" name="unidade" class="form-control"> 
+      <option>Unidade</option>
+      <option>Maco</option>  
+      <option>Kg</option> 
+    </select>
+    </div>
+
+<br><br>
+
+  <label class="col-sm-2 control-label" for="mes_prod">Mes producao:</label>
+    <div class="checkbox">
+      <label><input type="checkbox" name="janeiro" id="janeiro" onchange="validaFormulario()">Janeiro </label>&nbsp&nbsp
+      <label><input type="checkbox" name="fevereiro" id="fevereiro" onchange="validaFormulario()">Fevereiro </label>&nbsp&nbsp
+      <label><input type="checkbox" name="marco" id="marco" onchange="validaFormulario()">Marco </label>&nbsp&nbsp
+      <label><input type="checkbox" name="abril" id="abril" onchange="validaFormulario()">Abril </label>&nbsp&nbsp
+      <label><input type="checkbox" name="maio" id="maio" onchange="validaFormulario()">Maio </label>&nbsp&nbsp
+      <label><input type="checkbox" name="junho" id="junho" onchange="validaFormulario()">Junho </label>&nbsp&nbsp
+      <label><input type="checkbox" name="julho" id="julho" onchange="validaFormulario()">Julho </label>&nbsp&nbsp
+      <label><input type="checkbox" name="agosto" id="agosto" onchange="validaFormulario()">Agosto </label>&nbsp&nbsp
+      <label><input type="checkbox" name="setembro" id="setembro" onchange="validaFormulario()">Setembro </label>&nbsp&nbsp
+      <label><input type="checkbox" name="outubro" id="outubro" onchange="validaFormulario()">Outubro </label>&nbsp&nbsp
+      <label><input type="checkbox" name="novembro" id="novembro" onchange="validaFormulario()">Novembro </label>&nbsp&nbsp
+      <label><input type="checkbox" name="dezembro" id="dezembro" onchange="validaFormulario()">Dezembro </label>&nbsp&nbsp
+    </div>
+
+  <label class="col-sm-2 control-label" for="ativo">Ativo:</label>
+    <input type="radio" name ="ativo" id="ativo" value="sim" checked ="true">Sim &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="radio" name ="ativo" id="ativo" value="nao">Nao
+
+<br><br>
+
+    <div class="pager" style="line-height: 70px;">
+
+      <button type="button" class="btn btn-success" name="BotaoOK" id="BotaoOK" value="Submit Button" disabled>OK</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <button type="button" class="btn btn-danger">CANCELA</button>
+   </div>
+
+  </div>
+</form>
+
+
+
+</body>
+</html>

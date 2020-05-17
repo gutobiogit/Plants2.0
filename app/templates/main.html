@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='interruptor.css')}}"/>
+<script type="text/javascript">
+
+function altera(numero)
+{
+if (document.getElementById(numero).checked) {
+          window.location.assign(numero.slice(-1)+"/lig");
+}
+else {    window.location.assign(numero.slice(-1)+"/deslig");
+}
+}
+
+</script>
+<link rel="stylesheet" href="interruptor.css"/>
+<style>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 30px;
+    
+ }
+</style>
+
+
+
+<title>{{title}} --  {{time}}</title>
+</head>
+<body>
+
+
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi0" {% if sole0 == 1 %} checked {% endif %} onclick="altera('interrupi0')">
+  <div class="slider round"></div>
+</label>
+  <font color = "blue" size=5>Irrigacao mae&nbsp &nbsp &nbsp<font color =black size=2>potencia transmissao={{potencia}}</font></font>
+</br>
+</br>
+
+
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi1" {% if sole1 == 1 %} checked {% endif %} onclick="altera('interrupi1')">
+  <div class="slider round">                       </div> 
+</label> 
+  <font color = "blue" size=5>Irrigacao clone&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color =black size=2>temperatura={{tempext}} ºC</font></font>
+  </br>
+  </br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi2" {% if sole2 == 1 %} checked {% endif %} onclick="altera('interrupi2')">
+  <div class="slider round"></div>
+</label>
+  <font color = "yellow" size=5>Luz mae&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color =black size=2>umidade={{umidadeext}} %</font></font>
+  </br>
+  </br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi3" {% if sole3 == 1 %} checked {% endif %} onclick="altera('interrupi3')">
+  <div class="slider round"></div>
+</label>
+  <font color = "yellow" size=5>Luz clone&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color =black size=2>umidade solo={{umidadesolo}} </font></font>
+  </br>
+  </br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi4" {% if sole4 == 1 %} checked {% endif %} onclick="altera('interrupi4')">
+  <div class="slider round"></div>
+</label>
+  <font color = "red" size=5>EMERGENCIA (geral)&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<font color =black size=2>orvalho={{orvalhoext}} ºC</font></font>
+</br>
+</br>
+</br>
+</br>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="interrupi5" {% if sole5 == 1 %} checked {% endif %} onclick="altera('interrupi5')">
+  <div class="slider round"></div>
+</label>
+  <font color = "white" size=5>Flush do sistema</font>
+</br>
+</body>
+
+
+</p>
+</html>
